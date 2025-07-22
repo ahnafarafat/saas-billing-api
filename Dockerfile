@@ -16,4 +16,5 @@ RUN pip install --upgrade pip && pip install -r requirements.txt gunicorn
 COPY . /app/
 
 # Run the Django app
-CMD gunicorn django_app.wsgi:application --bind 0.0.0.0:$PORT
+CMD ["gunicorn", "django_app.wsgi:application", "--chdir", "django_app", "--bind", "0.0.0.0:$PORT"]
+
