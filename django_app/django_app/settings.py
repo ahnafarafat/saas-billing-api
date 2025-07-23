@@ -29,13 +29,15 @@ ALLOWED_HOSTS = [
     "saas-billing-api-production.up.railway.app",
     "127.0.0.1",
     "localhost",
-]  
+]
 
 
 CSRF_TRUSTED_ORIGINS = [
     "https://saas-billing-api-production.up.railway.app",
-    "https://*.preview.app.github.dev",  # For GitHub Codespaces
-    "https://localhost:8000",            # Localhost over HTTPS
+    "http://saas-billing-api-production.up.railway.app",
+    "https://*.preview.app.github.dev",  # GitHub Codespaces
+    "http://localhost:8000",
+    "https://localhost:8000",
 ]
 
 
