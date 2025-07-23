@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
 
 
 CSRF_TRUSTED_ORIGINS = [
+    "https://saas-billing-api-production.up.railway.app/admin"
     "https://saas-billing-api-production.up.railway.app",
     "http://saas-billing-api-production.up.railway.app",
     "https://*.preview.app.github.dev",  # GitHub Codespaces
