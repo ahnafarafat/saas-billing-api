@@ -33,13 +33,14 @@ ALLOWED_HOSTS = [
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://saas-billing-api-production.up.railway.app/admin"
     "https://saas-billing-api-production.up.railway.app",
     "http://saas-billing-api-production.up.railway.app",
+    "https://*.railway.app",
     "https://*.preview.app.github.dev",  # GitHub Codespaces
     "http://localhost:8000",
     "https://localhost:8000",
 ]
+
 
 
 REST_FRAMEWORK = {
