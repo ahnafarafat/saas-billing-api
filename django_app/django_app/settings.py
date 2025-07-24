@@ -31,10 +31,12 @@ ALLOWED_HOSTS = [
     "localhost",
 ]
 
-
 CSRF_TRUSTED_ORIGINS = [
     "https://saas-billing-api-production.up.railway.app",
 ]
+
+# TEMPORARY: Disable CSRF in development (remove after login works)
+MIDDLEWARE.remove("django.middleware.csrf.CsrfViewMiddleware")
 
 
 REST_FRAMEWORK = {
