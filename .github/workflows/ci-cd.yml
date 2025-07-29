@@ -24,9 +24,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run tests
-        run: |
-          python django_app/manage.py test
+      - name: Run Django tests
+        run: python django_app/manage.py test
 
       - name: Build Docker image
         run: docker build -t saas-billing-api .
@@ -38,4 +37,3 @@ jobs:
         run: railway up --service ${{ secrets.RAILWAY_SERVICE_ID }}
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_API_TOKEN }}
-
